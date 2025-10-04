@@ -17,7 +17,25 @@
         "command": "droid-panel.helloWorld",
         "title": "Hello World"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "droid-panel-sidebar",
+          "title": "Droid Panel",
+          "icon": "$(beaker)"
+        }
+      ]
+    },
+    "views": {
+      "droid-panel-sidebar": [
+        {
+          "type": "webview",
+          "id": "droid-panel.sidebarView",
+          "name": "Droid View"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",

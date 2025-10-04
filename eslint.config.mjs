@@ -1,11 +1,14 @@
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
+import eslintConfigPrettier from "eslint-config-prettier";
+import eslintPluginPrettier from "eslint-plugin-prettier";
 
 export default [{
     files: ["**/*.ts"],
 }, {
     plugins: {
         "@typescript-eslint": typescriptEslint,
+        prettier: eslintPluginPrettier,
     },
 
     languageOptions: {
@@ -24,5 +27,6 @@ export default [{
         eqeqeq: "warn",
         "no-throw-literal": "warn",
         semi: "warn",
+        "prettier/prettier": "warn",
     },
-}];
+}, eslintConfigPrettier];
